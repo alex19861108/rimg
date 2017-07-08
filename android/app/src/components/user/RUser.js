@@ -1,17 +1,22 @@
+'use strict';
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import {View, Button, StatusBar} from 'react-native';
 
-class RUser extends Component {
-    static navigationOptions = {
-        //tabBarLabel: "我的",
-        //tabBarIcon: () => <Icon size={24} name="person" color="#9E9E9E" />
-    }
-    render() {
-        return (
-            <View><Text>Person</Text></View>
-        );
-    }
+export default class RUser extends Component {
+	onPressLearnMore=()=>{
+		const { navigate } = this.props.navigation;
+        navigate('RLogin', {});
+	};
+	render() {
+		return (
+			<View>
+				<Button
+					onPress={this.onPressLearnMore}
+  					title="登陆"
+  					color="#841584"
+  					accessibilityLabel="Learn more about this purple button"
+				/>
+			</View>
+			);
+	}
 }
-
-export default RUser;

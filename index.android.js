@@ -28,6 +28,7 @@ import RPublish from './android/app/src/components/publish/RPublish.js';
 import RNotification from './android/app/src/components/notification/RNotification.js';
 import RFeedProvider from './android/app/src/components/notification/RFeedProvidor.js';
 import RUser from './android/app/src/components/user/RUser.js';
+import RLogin from './android/app/src/components/user/RLogin.js';
 import RCardDetail from './android/app/src/components/home/RCardDetail.js';
 import RCardComment from './android/app/src/components/home/RCardComment.js';
 
@@ -83,10 +84,11 @@ const RBottomTabNavigator = TabNavigator({
 const RMainStackNavigator = StackNavigator({
     RBottomTabNavigator: {screen: RBottomTabNavigator},
     RCardDetail: { screen: RCardDetail },
+    RLogin: {screen: RLogin},
 }, {
     initialRouteName: "RBottomTabNavigator",
     navigationOptions: ({navigation}) => ({
-      title: "毛毛虫",
+      title: "图趣",
       headerStyle: {
           backgroundColor: '#E53935',
       },

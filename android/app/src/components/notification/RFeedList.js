@@ -8,9 +8,7 @@ export default class FeedList extends Component {
     }
 
     render() {
-        console.log(this.props.data);
         if (this.props.data.networkStatus === 1) {
-            console.log("networkStatus===1");
             return <ActivityIndicator style={styles.loading}/>;
         }
         if (this.props.data.error) {
