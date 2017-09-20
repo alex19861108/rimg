@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Button, TouchableOpacity, Navigator} from 'react
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import RCardList from './RCardList.js';
-import RCardSummary from './RCardSummary.js';
+import RFeedList from './RFeedList.js';
 
 class RHome extends Component {
     static navigationOptions = {
@@ -12,7 +12,8 @@ class RHome extends Component {
     };
     render() {
         return (
-            <RCardList navigation={this.props.navigation}/>
+            // <RCardList navigation={this.props.navigation}/>
+            <RFeedList navigation={this.props.navigation}/>
         );
     }
 };

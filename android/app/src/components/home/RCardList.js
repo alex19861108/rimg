@@ -26,7 +26,8 @@ export default class RCardList extends Component {
 
     componentDidMount() {
         url = API_HOST + "/api/card/get";
-        fetch(url)
+
+        fetch(Global.API_CARD_GET_URL)
         .then(
             function(response) {
                 if (response.status >= 200 && response.status < 300) {

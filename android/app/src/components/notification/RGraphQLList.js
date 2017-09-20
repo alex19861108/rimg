@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {StyleSheet, ActivityIndicator, Text} from 'react-native';
 import {List, ListItem} from 'react-native-elements';
 
-export default class FeedList extends Component {
+export default class GraphQLList extends Component {
     constructor(props) {
         super(props);
     }

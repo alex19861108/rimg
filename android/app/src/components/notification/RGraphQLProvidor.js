@@ -14,9 +14,9 @@ import {
     gql,
     graphql
 } from 'react-apollo';
-import RFeed from './RFeed.js';
+import RGraphQL from './RGraphQL.js';
 
-const FeedWithData = graphql(gql `{
+const GraphQLWithData = graphql(gql `{
     feed (type: TOP, limit: 10) {
         repository {
             name, owner { login }
@@ -30,9 +30,9 @@ const FeedWithData = graphql(gql `{
     options: {
         notifyOnNetworkStatusChange: true
     }
-})(RFeed);
+})(RGraphQL);
 
-export default class RFeedProvider extends Component {
+export default class RGraphQLProvider extends Component {
     createClient = () => {
         return new ApolloClient({
             networkInterface: createNetworkInterface({
@@ -47,7 +47,7 @@ export default class RFeedProvider extends Component {
                 this.createClient()
             } >
             <
-            FeedWithData / >
+            GraphQLWithData / >
             <
             /ApolloProvider>
         );

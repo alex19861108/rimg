@@ -26,7 +26,7 @@ import RHome from './android/app/src/components/home/RHome.js';
 import RSearch from './android/app/src/components/search/RSearch.js';
 import RPublish from './android/app/src/components/publish/RPublish.js';
 import RNotification from './android/app/src/components/notification/RNotification.js';
-import RFeedProvider from './android/app/src/components/notification/RFeedProvidor.js';
+import RGraphQLProvider from './android/app/src/components/notification/RGraphQLProvidor.js';
 import RUser from './android/app/src/components/user/RUser.js';
 import RLogin from './android/app/src/components/user/RLogin.js';
 import RCardDetail from './android/app/src/components/home/RCardDetail.js';
@@ -35,7 +35,7 @@ import RCardComment from './android/app/src/components/home/RCardComment.js';
 const RBottomTabNavigator = TabNavigator({
   RHome: { screen: RHome },
   RSearch: { screen: RSearch },
-  RFeedProvider: { screen: RFeedProvider },
+  RGraphQLProvider: { screen: RGraphQLProvider },
   RUser: { screen: RUser }
 }, {
   initialRouteName: "RHome",
@@ -62,7 +62,7 @@ const RBottomTabNavigator = TabNavigator({
             activeLabelColor: '#E53935',
             barBackgroundColor: '#E0E0E0'
         },
-        RFeedProvider: {
+        RGraphQLProvider: {
             label: <Text style={{fontSize:12}}>通知</Text>,
             icon: <Icon size={24} name='notifications'/>,
             activeIcon: <Icon size={24} name='notifications' color='#E53935'/>,
@@ -88,7 +88,7 @@ const RMainStackNavigator = StackNavigator({
 }, {
     initialRouteName: "RBottomTabNavigator",
     navigationOptions: ({navigation}) => ({
-      title: "图趣",
+      title: "品图",
       headerStyle: {
           backgroundColor: '#E53935',
       },
